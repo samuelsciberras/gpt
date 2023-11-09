@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Sciberras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 0 0 20;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        footer {
+    text-align: center;
+    color: #666;
+    padding: 10px;
+    margin-top: auto; /* Push the footer to the bottom of the container */
+}
+        header {
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            padding: 2em 0;
+            position: relative;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        @keyframes rotateText {
+            0%, 100% {
+                content: 'Software Engineer';
+            }
+            25% {
+                content: 'Solutions Architect';
+            }
+            50% {
+                content: 'Machine Learning Developer';
+            }
+            75% {
+                content: 'AI Enthusiast';
+            }
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-buttons a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0 10px; /* 10px spacing between buttons */
+        }
+
+        .linkedin {
+            background-image: url('https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png');
+        }
+
+        .github {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        section header {
+            padding: 20px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            background: linear-gradient(to top right, #333, #666);
+        }
+
+        section.collapsible header {
+            background: linear-gradient(to top right, #333, #666);
+        }
+
+        section div {
+            padding: 20px;
+            transition: max-height 0.5s ease-out;
+            max-height: 500px; /* Set initial max-height */
+            overflow: hidden;
+        }
+
+        section.collapsed div {
+            max-height: 0;
+            padding: 0 20px; /* Preserve padding when collapsed */
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+
+        .timeline {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .timeline li {
+            flex: 1 0 calc(50% - 10px);
+            position: relative;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            margin: 0 0 20px;
+            padding: 20px;
+        }
+
+        .timeline li::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 15px;
+            background-color: #333;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline li::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: calc(50% + 7.5px);
+            height: 100%;
+            border: 2px solid #333;
+            z-index: 0;
+        }
+
+        .timeline li div {
+            flex: 1;
+            z-index: 1;
+        }
+
+        .experience-list {
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .experience-list li {
+            flex: 0 0 calc(50% - 10px);
+            margin-bottom: 20px;
+            text-align: center; /* Center the content */
+        }
+
+        .experience-list h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .experience-list p {
+            margin: 0;
+            color: #666;
+        }
+
+        .publications a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .publications a:hover {
+            text-decoration: underline;
+        }
+
+        #experience-sections h3 {
+            cursor: pointer;
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+
+        #experience-sections h3:hover {
+            color: #666;
+        }
+
+        #experience-sections p {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        #experience-sections.expanded p {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://scontent.fmla1-2.fna.fbcdn.net/v/t39.30808-6/255003548_4974599592559677_4515722914308813365_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ea0s3hv5z1QAX_lYRMY&_nc_ht=scontent.fmla1-2.fna&oh=00_AfAePcjluFrsjxip9qCKF5cYQPK9khakn4V22v-iGJMFww&oe=6552915C" alt="Your Photo">
+        <h1 id="headingName">Samuel Sciberras</h1>
+        <div class="role">
+            <!-- Content will be dynamically rotated here -->
+        </div>
+        <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/samuelsciberras96" class="linkedin" title="LinkedIn" target="_blank"></a>
+            <a href="https://github.com/samuelsciberras" class="github" title="GitHub" target="_blank"></a>
+        </div>
+    </header>
+
+    <section class="collapsible">
+        <header onclick="toggleSection(this)">Experience</header>
+        <div id="experience-sections">
+            <!-- Subsection 1 -->
+            <h3 onclick="toggleDetails(this)">Software Engineer – Novibet (July 2021 - May 2022)</h3>
+            <p>
+                Joined a newly established development and architecture team with
+                the role of building, maintaining, and scaling back-end systems used by
+                various internal platforms.
+            </p>
+    
+            <!-- Subsection 2 -->
+            <h3 onclick="toggleDetails(this)">Systems Developer – Altaro Software (July 2020 - June 2021)</h3>
+            <p>
+                Continued on my work as a Junior Systems Developer at Altaro Software,
+                expanding my role by taking on responsibilities such as mentoring new team
+                members, communicating directly and collecting requirements from several
+                other departments, maintaining existing and deploying new features to
+                production environments.
+            </p>
+    
+            <!-- Subsection 3 -->
+            <h3 onclick="toggleDetails(this)">Junior Systems Developer – Altaro Software (July 2018 - July 2020)</h3>
+            <p>
+                Worked within an Agile development team to expand and maintain internal
+                systems such as licensing, billing, partners CRM, marketing webpages, and
+                more.
+            </p>
+    
+            <!-- Subsection 4 -->
+            <h3 onclick="toggleDetails(this)">Teaching Assistant – University of Malta (Oct 2018 - January 2019)</h3>
+            <p>
+                Prepared material and delivered practical classes to final year students
+                enrolled for the unit ‘Digital Forensics’.
+            </p>
+    
+            <!-- Subsection 5 -->
+            <h3 onclick="toggleDetails(this)">Junior Software Developer – MITA (July 2017 - January 2018)</h3>
+            <p>
+                Designed, implemented, and tested a digital serious game on the topic of
+                Computing for Secondary Education Schools.
+            </p>
+        </div>
+    </section>
+
+    <section class="collapsible">
+        <header onclick="toggleSection(this)">Education</header>
+        <div class="education">
+            <h3>M.Sc - Artificial Intelligence</h3>
+            <p>Master of Science</p>
+            <p>University of Malta</p>
+            <p>2019-2021</p>
+
+            <h3>B.Sc. IT (Hons.) - Software Development</h3>
+            <p>Bachelor of Science</p>
+            <p>University of Malta</p>
+            <p>2015-2018</p>
+        </div>
+    </section>
+
+    <section class="collapsible">
+        <header onclick="toggleSection(this)">Publications</header>
+        <div class="publications">
+            <p>
+                <a href="https://link.springer.com/chapter/10.1007/978-981-15-6634-9_33" target="_blank">
+                    Investigating Movement Detection in Unedited Camera Footage
+                </a>
+            </p>
+            <p>International Conference on Advances in Computing and Data Sciences, 2020, pp 362-371</p>
+        </div>
+    </section>
+
+    <script>
+        function toggleSection(sectionHeader) {
+            var section = sectionHeader.parentElement;
+            section.classList.toggle("collapsed");
+        }
+
+        function toggleDetails(element) {
+            var container = document.getElementById('experience-sections');
+            var paragraphs = container.getElementsByTagName('p');
+
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.maxHeight = '0';
+            }
+
+            var details = element.nextElementSibling;
+            details.style.maxHeight = details.style.maxHeight === '0px' ? '1000px' : '0';
+        }
+    </script>
+
+<footer>
+    &copy; Samuel Sciberras - 2023
+</footer>
+</body>
+</html>
