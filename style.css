@@ -11,6 +11,11 @@ html {
   margin-bottom: -5px;
 }
 
+.role-mb {
+    margin-top: -12px;
+    display: none;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -23,7 +28,7 @@ footer {
   text-align: center;
   color: #666;
   padding: 10px;
-  margin-top: auto; /* Push the footer to the bottom of the container */
+  margin-top: auto; 
 }
 
 header {
@@ -81,7 +86,7 @@ section header {
   padding: 20px;
   color: #fff;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   margin-bottom: 10px;
   background: linear-gradient(to top right, #333, #666);
 }
@@ -98,7 +103,7 @@ h2 {
 }
 
 .content-container {
-  width: 30%; /* Set the width of the carousel to 50% of the screen */
+  width: 40%; /* Set the width of the carousel to 50% of the screen */
   margin: 0 auto; /* Center the carousel */
 }
 
@@ -178,5 +183,15 @@ h2 {
 @media (max-width: 750px) {
   .content-container {
     width: 90%; /* Set the width of the carousel to 50% of the screen */
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .role-mb {
+    font-size: 13px;
+    display: block;
+  }
+  .mb-hidden {
+    display: none;
   }
 }
