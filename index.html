@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samuel Sciberras</title>
     <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link rel="stylesheet" href="./style_import.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style_1300.css" />
+    <link rel="stylesheet" href="./style_1000.css" />
+    <link rel="stylesheet" href="./style_750.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -23,6 +27,10 @@
         <i style="margin-right: 5px" class="fas fa-map-pin"></i> Amsterdam,
         Netherlands
       </p>
+      <div class="flag-container">
+        <img src="./flag.png" alt="Maltese Flag" class="flag-icon">
+        <span class="flag-text">Maltese</span>
+    </div>
       <div class="social-buttons">
         <a
           href="https://www.linkedin.com/in/samuelsciberras96"
@@ -45,6 +53,7 @@
         <button onclick="scrollToElement('experience')">Experience</button>
         <button onclick="scrollToElement('education')">Education</button>
         <button onclick="scrollToElement('publications')">Publications</button>
+        <button onclick="scrollToElement('skills')">Skills</button>
       </div>
 
       <!-- Slide 1: Experience -->
@@ -157,6 +166,58 @@
             >
           </p>
         </div>
+      </section>
+
+      <!-- Slide 3: Publications -->
+      <section class="slide" id="skills">
+        <header>Technical Skills</header>
+        <div class="publications">
+          <div class="tab">
+            <button id="languagesSkill" class="tablinks" onclick="openCategory(event, 'ProgrammingLanguages')">Languages</button>
+            <button class="tablinks" onclick="openCategory(event, 'Frameworks')">Frameworks</button>
+            <button class="tablinks" onclick="openCategory(event, 'Desktop')">Desktop</button>
+            <button class="tablinks" onclick="openCategory(event, 'Web')">Web</button>
+            <button class="tablinks" onclick="openCategory(event, 'MachineLearning')">Machine Learning</button>
+            <button class="tablinks" onclick="openCategory(event, 'Databases')">Databases</button>
+            <button class="tablinks" onclick="openCategory(event, 'Other')">Other</button>
+          </div>
+        
+          <div id="ProgrammingLanguages" class="tabcontent">
+            <h3>Languages</h3>
+            <p>C#, JavaScript, TypeScript, Python, PHP, SQL</p>
+          </div>
+        
+          <div id="Frameworks" class="tabcontent">
+            <h3>Frameworks and Environments</h3>
+            <p>.NET, Mono, Node JS, Express JS, Angular</p>
+          </div>
+
+          <div id="Desktop" class="tabcontent">
+            <h3>Desktop</h3>
+            <p>WPF (Windows Presentation Framework), Windows Forms, PyQT</p>
+          </div>
+        
+          <div id="Web" class="tabcontent">
+            <h3>Web</h3>
+            <p>ASP.NET (MVC), Flask, JQuery, CSS</p>
+          </div>
+        
+          <div id="MachineLearning" class="tabcontent">
+            <h3>Machine Learning</h3>
+            <p>TensorFlow, PyTorch, ML.NET</p>
+          </div>
+        
+          <div id="Databases" class="tabcontent">
+            <h3>Databases</h3>
+            <p>Azure SQL, SQL Server, SQLite, MongoDB</p>
+          </div>
+
+          <div id="Other" class="tabcontent">
+            <h3>Other</h3>
+            <p>Open CV, Unity, Nvidia CUDA, Git, GitLab, Jira, Docker, Postman, Redis, Rabbit MQ</p>
+          </div>
+        </div>
+        
       </section>
     </div>
 

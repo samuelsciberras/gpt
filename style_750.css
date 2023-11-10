@@ -1,0 +1,29 @@
+@media (max-width: 750px) {
+    .content-container {
+      width: 90%; /* Set the width of the carousel to 50% of the screen */
+    }
+    .tab button {
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 13px;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+  
+    .tabcontent p {
+      font-size: 12px;
+    }
+  
+    h3 {
+      font-size: 14px;
+    }
+    .role-mb {
+      font-size: 13px;
+      display: block;
+    }
+    .mb-hidden {
+      display: none;
+    }
+  }
