@@ -12,8 +12,8 @@ html {
 }
 
 .role-mb {
-    margin-top: -12px;
-    display: none;
+  margin-top: -12px;
+  display: none;
 }
 
 body {
@@ -28,7 +28,7 @@ footer {
   text-align: center;
   color: #666;
   padding: 10px;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 header {
@@ -166,6 +166,11 @@ h2 {
 }
 .readmore {
   margin-left: 5px;
+}
+
+#dynamic-text {
+  text-align: center;
+  font-size: 24px;
 }
 
 @media (max-width: 1300px) {
