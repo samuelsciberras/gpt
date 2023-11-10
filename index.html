@@ -4,302 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samuel Sciberras</title>
-    <link rel="icon" type="image/x-icon" href="./fav2-removebg-preview.png">
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-
-      #headingName {
-        font-family: "Dancing Script", cursive; /* This is a Google font that looks handwritten */
-        font-size: 34px; /* Adjust the size as needed */
-        color: #000; /* This is black color, you can change as needed */
-      }
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        /* Radial gradient from dark grey to white */
-        background-image: radial-gradient(circle at center, white, darkgrey);
-      }
-
-      footer {
-        text-align: center;
-        color: #666;
-        padding: 10px;
-        margin-top: auto; /* Push the footer to the bottom of the container */
-      }
-
-      header {
-        color: #333;
-        text-align: center;
-        padding: 2em 0;
-      }
-
-      header img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 10px;
-      }
-
-      .social-buttons {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      .social-buttons a {
-        display: block;
-        width: 50px;
-        height: 50px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 0 10px; /* 10px spacing between buttons */
-        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-      }
-
-      .social-buttons a:hover {
-        transform: scale(1.05); /* Slightly increase the size on hover */
-      }
-
-      .linkedin {
-        background-image: url("https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png");
-      }
-
-      .github {
-        background-image: url("https://cdn-icons-png.flaticon.com/512/25/25231.png");
-      }
-
-      section {
-        margin: 0 auto;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-        border-radius: 5px;
-        overflow: hidden;
-      }
-
-      section header {
-        padding: 20px;
-        cursor: pointer;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: underline;
-        margin-bottom: 10px;
-        background: linear-gradient(to top right, #333, #666);
-      }
-
-      section.collapsible header {
-        background: linear-gradient(to top right, #333, #666);
-      }
-
-      section div {
-        padding: 20px;
-        transition: max-height 0.5s ease-out;
-        max-height: 500px; /* Set initial max-height */
-        overflow: hidden;
-      }
-
-      section.collapsed div {
-        max-height: 0;
-        padding: 0 20px; /* Preserve padding when collapsed */
-        overflow: hidden;
-      }
-
-      h1,
-      h2 {
-        color: #333;
-      }
-
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
-
-      li {
-        margin-bottom: 10px;
-      }
-
-      .timeline {
-        margin-top: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      .timeline li {
-        flex: 1 0 calc(50% - 10px);
-        position: relative;
-        background-color: #f4f4f4;
-        border-radius: 5px;
-        margin: 0 0 20px;
-        padding: 20px;
-      }
-
-      .timeline li::before {
-        content: "";
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 15px;
-        height: 15px;
-        background-color: #333;
-        border-radius: 50%;
-        z-index: 1;
-      }
-
-      .timeline li::after {
-        content: "";
-        position: absolute;
-        top: 20px;
-        left: calc(50% + 7.5px);
-        height: 100%;
-        border: 2px solid #333;
-        z-index: 0;
-      }
-
-      .timeline li div {
-        flex: 1;
-        z-index: 1;
-      }
-
-      .experience-list {
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      .experience-list li {
-        flex: 0 0 calc(50% - 10px);
-        margin-bottom: 20px;
-        text-align: center; /* Center the content */
-      }
-
-      .experience-list h3 {
-        margin-bottom: 5px;
-        color: #333;
-      }
-
-      .experience-list p {
-        margin: 0;
-        color: #666;
-      }
-
-      .publications a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .publications a:hover {
-        text-decoration: underline;
-      }
-
-      #experience-sections h3 {
-        cursor: pointer;
-        text-decoration: underline;
-        margin-bottom: 5px;
-      }
-
-      #experience-sections h3:hover {
-        color: #666;
-      }
-
-      #experience-sections p {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-      }
-
-      #experience-sections.expanded p {
-        max-height: 1000px;
-        transition: max-height 0.5s ease-in-out;
-      }
-
-      .carousel {
-        width: 50%; /* Set the width of the carousel to 50% of the screen */
-        margin: 0 auto; /* Center the carousel */
-        overflow: hidden; /* Hide the overflow to show only one slide */
-      }
-
-      .carousel-slides {
-        display: flex;
-        transition: transform 0.5s ease;
-        width: 100%; /* Ensure that each slide takes up the full width of the carousel */
-      }
-
-      .slide {
-        flex: 0 0 100%; /* Each slide takes up 100% of the carousel width */
-        box-sizing: border-box;
-        padding: 20px;
-        transition: transform 0.5s ease-in-out; /* smooth transition for the transform */
-      }
-
-      .carousel-header {
-        text-align: center;
-      }
-
-      .carousel-header button {
-        background-color: linear-gradient(to top right, #333, #2a2a2a);
-        color: #333; /* White text */
-        padding: 10px 20px; /* Padding around the text */
-        margin: 5px; /* Spacing between buttons */
-        border: none; /* No border */
-        border-radius: 4px; /* Rounded corners */
-        cursor: pointer; /* Cursor changes to pointer on hover */
-        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-        font-size: 16px; /* Font size */
-        font-weight: bold; /* Bold font */
-      }
-
-      .carousel-header button:hover {
-        background-color: #666;
-        color: white;
-        transform: scale(1.05); /* Slightly increase the size on hover */
-      }
-
-      /* Active button styling */
-      .active {
-        background-color: #333; /* Darker background for active button */
-        color: #fff !important; /* White text for active button */
-      }
-
-      .slide-rotate {
-        transform: rotateY(180deg); /* example rotation; adjust as needed */
-      }
-
-      /* Media Queries for Mobile */
-      @media only screen and (max-width: 600px) {
-        header img {
-          width: 80px;
-          height: 80px;
-        }
-
-        .social-buttons a {
-          width: 40px;
-          height: 40px;
-        }
-
-        section {
-          max-width: 100%;
-        }
-
-        .timeline li,
-        .experience-list li {
-          flex: 1 0 100%;
-        }
-      }
-    </style>
+    <link rel="icon" type="image/x-icon" href="./fav2-removebg-preview.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <header>
       <img
         src="https://media.licdn.com/dms/image/C4E03AQF-UioShIvZBQ/profile-displayphoto-shrink_800_800/0/1657893872784?e=1704931200&v=beta&t=OR1P3mkHLz4tEfpsCGpmRS_bc4B2lcVxgBd06H-sqfs"
-        alt="Your Photo"
+        alt=""
       />
       <h1 id="headingName">Samuel Sciberras</h1>
+      <p>
+        <i style="margin-right: 5px" class="fas fa-map-pin"></i> Amsterdam,
+        Netherlands
+      </p>
       <div class="role">
         <!-- Content will be dynamically rotated here -->
       </div>
@@ -319,157 +41,121 @@
       </div>
     </header>
 
-    <div class="carousel">
+    <div class="content-container">
       <!-- Carousel Header -->
       <div class="carousel-header">
-        <button onclick="showSlide(0)">Experience</button>
-        <button onclick="showSlide(1)">Education</button>
-        <button onclick="showSlide(2)">Publications</button>
+        <button onclick="scrollToElement('experience')">Experience</button>
+        <button onclick="scrollToElement('education')">Education</button>
+        <button onclick="scrollToElement('publications')">Publications</button>
       </div>
 
-      <!-- Carousel Slides -->
-      <div class="carousel-slides">
-        <!-- Slide 1: Experience -->
-        <section class="slide" id="experience">
-          <header>Experience</header>
-          <div id="experience-sections">
-            <!-- Subsection 1 -->
-            <h3 onclick="toggleDetails(this)">
-              Software Engineer – Novibet (July 2021 - May 2022)
-            </h3>
-            <p>
-              Joined a newly established development and architecture team with
-              the role of building, maintaining, and scaling back-end systems
-              used by various internal platforms.
-            </p>
+      <!-- Slide 1: Experience -->
+      <section class="slide" id="experience">
+        <header>Experience</header>
+        <div>
+          <h3 class="role">Software Engineer – DataSnipper</h3>
+          <h4 class="date">
+            (June 2022 - Present)<a class="readmore" href="#">Read more..</a>
+          </h4>
+          <p class="moreinfo">
+            Joined a newly established development and architecture team with
+            the role of building, maintaining, and scaling back-end systems used
+            by various internal platforms.
+          </p>
 
-            <!-- Subsection 2 -->
-            <h3 onclick="toggleDetails(this)">
-              Systems Developer – Altaro Software (July 2020 - June 2021)
-            </h3>
-            <p>
-              Continued on my work as a Junior Systems Developer at Altaro
-              Software, expanding my role by taking on responsibilities such as
-              mentoring new team members, communicating directly and collecting
-              requirements from several other departments, maintaining existing
-              and deploying new features to production environments.
-            </p>
+          <h3 class="role">Software Engineer – Novibet</h3>
+          <h4 class="date">
+            (July 2021 - May 2022) <a class="readmore" href="#">Read more..</a>
+          </h4>
+          <p class="moreinfo">
+            Joined a newly established development and architecture team with
+            the role of building, maintaining, and scaling back-end systems used
+            by various internal platforms.
+          </p>
 
-            <!-- Subsection 3 -->
-            <h3 onclick="toggleDetails(this)">
-              Junior Systems Developer – Altaro Software (July 2018 - July 2020)
-            </h3>
-            <p>
-              Worked within an Agile development team to expand and maintain
-              internal systems such as licensing, billing, partners CRM,
-              marketing webpages, and more.
-            </p>
+          <h3 class="role">Systems Developer – Altaro Software</h3>
+          <h4 class="date">
+            (July 2020 - June 2021)<a class="readmore" href="#">Read more..</a>
+          </h4>
+          <p class="moreinfo">
+            Continued on my work as a Junior Systems Developer at Altaro
+            Software, expanding my role by taking on responsibilities such as
+            mentoring new team members, communicating directly and collecting
+            requirements from several other departments, maintaining existing
+            and deploying new features to production environments.
+          </p>
 
-            <!-- Subsection 4 -->
-            <h3 onclick="toggleDetails(this)">
-              Teaching Assistant – University of Malta (Oct 2018 - January 2019)
-            </h3>
-            <p>
-              Prepared material and delivered practical classes to final year
-              students enrolled for the unit ‘Digital Forensics’.
-            </p>
+          <h3 class="role">Junior Systems Developer – Altaro Software</h3>
+          <h4 class="date">
+            (July 2018 - July 2020)<a class="readmore" href="#">Read more..</a>
+          </h4>
+          <p class="moreinfo">
+            Worked within an Agile development team to expand and maintain
+            internal systems such as licensing, billing, partners CRM, marketing
+            webpages, and more.
+          </p>
 
-            <!-- Subsection 5 -->
-            <h3 onclick="toggleDetails(this)">
-              Junior Software Developer – MITA (July 2017 - January 2018)
-            </h3>
-            <p>
-              Designed, implemented, and tested a digital serious game on the
-              topic of Computing for Secondary Education Schools.
-            </p>
-          </div>
-        </section>
+          <h3 class="role">Teaching Assistant – University of Malta</h3>
+          <h4 class="date">
+            (October 2018 - January 2019)<a class="readmore" href="#"
+              >Read more..</a
+            >
+          </h4>
+          <p class="moreinfo">
+            Prepared material and delivered practical classes to final year
+            students enrolled for the unit ‘Digital Forensics’.
+          </p>
 
-        <!-- Slide 2: Education -->
-        <section class="slide" id="education">
-          <header>Education</header>
-          <div class="education">
-            <h3>M.Sc - Artificial Intelligence</h3>
-            <p>Master of Science</p>
-            <p>University of Malta</p>
-            <p>2019-2021</p>
+          <h3 class="role">Junior Software Developer – MITA</h3>
+          <h4 class="date">
+            (July 2017 - January 2018)<a class="readmore" href="#"
+              >Read more..</a
+            >
+          </h4>
+          <p class="moreinfo">
+            Designed, implemented, and tested a digital serious game on the
+            topic of Computing for Secondary Education Schools.
+          </p>
+        </div>
+      </section>
 
-            <h3>B.Sc. IT (Hons.) - Software Development</h3>
-            <p>Bachelor of Science</p>
-            <p>University of Malta</p>
-            <p>2015-2018</p>
-          </div>
-        </section>
+      <!-- Slide 2: Education -->
+      <section class="slide" id="education">
+        <header>Education</header>
+        <div class="education">
+          <h3>M.Sc - Artificial Intelligence</h3>
+          <p class="uni">University of Malta</p>
+          <p class="subinfo">Master of Science</p>
+          <p class="date">2019-2021</p>
+          <br />
+          <h3>B.Sc. IT (Hons.) - Software Development</h3>
+          <p class="uni">University of Malta</p>
+          <p class="subinfo">Bachelor of Science</p>
+          <p class="date">2015-2018</p>
+        </div>
+      </section>
 
-        <!-- Slide 3: Publications -->
-        <section class="slide" id="publications">
-          <header>Publications</header>
-          <div class="publications">
-            <p>
-              <a
-                href="https://link.springer.com/chapter/10.1007/978-981-15-6634-9_33"
-                target="_blank"
-              >
-                Investigating Movement Detection in Unedited Camera Footage
-              </a>
-            </p>
-            <p>
-              International Conference on Advances in Computing and Data
-              Sciences, 2020, pp 362-371
-            </p>
-          </div>
-        </section>
-      </div>
+      <!-- Slide 3: Publications -->
+      <section class="slide" id="publications">
+        <header>Publications</header>
+        <div class="publications">
+          <h3>
+            International Conference on Advances in Computing and Data Sciences,
+            2020, pp 362-371
+          </h3>
+          <p class="subinfo">
+            <a
+              href="https://link.springer.com/chapter/10.1007/978-981-15-6634-9_33"
+              target="_blank"
+              >Click here to read</a
+            >
+          </p>
+        </div>
+      </section>
     </div>
 
-    <script>
-      function toggleSection(sectionHeader) {
-        var section = sectionHeader.parentElement;
-        section.classList.toggle("collapsed");
-      }
-
-      function toggleDetails(element) {
-        var container = document.getElementById("experience-sections");
-        var paragraphs = container.getElementsByTagName("p");
-
-        for (var i = 0; i < paragraphs.length; i++) {
-          paragraphs[i].style.maxHeight = "0";
-        }
-
-        var details = element.nextElementSibling;
-        details.style.maxHeight =
-          details.style.maxHeight === "0px" ? "1000px" : "0";
-      }
-
-      function showSlide(index) {
-        const slides = document.getElementsByClassName("slide");
-        const buttons = document.querySelectorAll(".carousel-header button");
-        const offset = -index * 100;
-
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.transform = `translateX(${offset}%)`;
-        }
-
-        // Update active button class
-        buttons.forEach((btn) => btn.classList.remove("active"));
-        buttons[index].classList.add("active");
-      }
-
-      document.querySelectorAll(".carousel-header button").forEach((button) => {
-        button.addEventListener("click", function () {
-          const slides = document.querySelectorAll(".slide");
-          slides.forEach((slide) => {
-            slide.classList.toggle("slide-rotate"); // Toggle rotation class on click
-          });
-        });
-      });
-
-      // Set initial active state on page load
-      window.onload = function () {
-        showSlide(0); // Assuming the first slide is active by default
-      };
-    </script>
-
     <footer>&copy; Samuel Sciberras - 2023</footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
