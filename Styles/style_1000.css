@@ -2,4 +2,7 @@
     .content-container {
       width: 70%; 
     }
+    #headingName {
+      font-size: 34px;
+    }
   }
