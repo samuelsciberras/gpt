@@ -54,8 +54,8 @@ header img {
   height: 30px;
   background-size: cover;
   background-repeat: no-repeat;
+  color: #171515;
   margin: 0 10px;
-  transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-buttons a:hover {
@@ -63,11 +63,7 @@ header img {
 }
 
 .linkedin {
-  background-image: url("https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png");
-}
-
-.github {
-  background-image: url("https://cdn-icons-png.flaticon.com/512/25/25231.png");
+  color: #0077b5  !important;
 }
 
 section {
