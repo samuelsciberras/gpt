@@ -190,51 +190,212 @@
     <!-- Slide 3: Publications -->
     <section class="slide" id="skills">
       <header>Technical Skills</header>
-      <div class="publications">
-        <div class="tab">
-          <button id="languagesSkill" class="tablinks"
-            onclick="openCategory(event, 'ProgrammingLanguages')">Languages</button>
-          <button class="tablinks" onclick="openCategory(event, 'Frameworks')">Frameworks</button>
-          <button class="tablinks" onclick="openCategory(event, 'Desktop')">Desktop</button>
-          <button class="tablinks" onclick="openCategory(event, 'Web')">Web</button>
-          <button class="tablinks" onclick="openCategory(event, 'MachineLearning')">Machine Learning</button>
-          <button class="tablinks" onclick="openCategory(event, 'Databases')">Databases</button>
-          <button class="tablinks" onclick="openCategory(event, 'Other')">Other</button>
-        </div>
-
+      <div class="skills">
         <div id="ProgrammingLanguages" class="tabcontent">
+
+          <!-- Languages -->
           <h3>Languages</h3>
-          <p>C#, JavaScript, TypeScript, Python, PHP, SQL</p>
+          <div class="gauge-container">
+            <div class="gauge-text">C#</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-csharp"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">JavaScript</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-js"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">TypeScript</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-ts"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Python</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-python"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">PHP</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-php"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">SQL</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-sql"></div>
+            </div>
+          </div>
         </div>
 
+        <!-- Frameworks -->
         <div id="Frameworks" class="tabcontent">
           <h3>Frameworks and Environments</h3>
-          <p>.NET, Mono, Node JS, Express JS, Angular</p>
+          <div class="gauge-container">
+            <div class="gauge-text">.NET</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-dotnet"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Node JS</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-node"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Express JS</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-express"></div>
+            </div>
+          </div>
         </div>
 
         <div id="Desktop" class="tabcontent">
           <h3>Desktop</h3>
-          <p>WPF (Windows Presentation Framework), Windows Forms, PyQT</p>
+          <div class="gauge-container">
+            <div class="gauge-text">WPF (Windows Presentation Framework)</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-wpf"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Windows Forms</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-winforms"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">PyQT</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-pyqt"></div>
+            </div>
+          </div>
         </div>
 
         <div id="Web" class="tabcontent">
           <h3>Web</h3>
-          <p>ASP.NET (MVC), Flask, JQuery, CSS</p>
+          <div class="gauge-container">
+            <div class="gauge-text">ASP.NET</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-asp"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Flask</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-flask"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Angular</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-angular"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">JQuery</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-jq"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">CSS</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-css"></div>
+            </div>
+          </div>
         </div>
 
         <div id="MachineLearning" class="tabcontent">
           <h3>Machine Learning</h3>
-          <p>TensorFlow, PyTorch, ML.NET</p>
+          <div class="gauge-container">
+            <div class="gauge-text">TensorFlow</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-tf"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">PyTorch</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-pytorch"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">ML.NET</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-mlnet"></div>
+            </div>
+          </div>
         </div>
 
-        <div id="Databases" class="tabcontent">
-          <h3>Databases</h3>
-          <p>Azure SQL, SQL Server, SQLite, MongoDB</p>
-        </div>
-
-        <div id="Other" class="tabcontent">
+        <div id="Other Libraries and Tools" class="tabcontent">
           <h3>Other</h3>
-          <p>Open CV, Unity, Nvidia CUDA, Git, GitLab, Jira, Docker, Postman, Redis, Rabbit MQ</p>
+          <div class="gauge-container">
+            <div class="gauge-text">Open CV</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-opencv"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Unity</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-unity"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Nvidia CUDA</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-cuda"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Git</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-git"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Docker</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-docker"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">GitLab</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-gitlab"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Jira</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-jira"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Postman</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-postman"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Redis</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-redis"></div>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <div class="gauge-text">Rabbit MQ</div>
+            <div class="gauge">
+              <div class="gauge-fill" id="gauge-rabbit"></div>
+            </div>
+          </div>
         </div>
       </div>
 

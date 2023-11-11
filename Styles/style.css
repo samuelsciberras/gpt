@@ -225,8 +225,125 @@ h2 {
 }
 
 .tabcontent {
-  display: none;
+  display: block;
   padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+}
+
+.tabcontent div {
+  padding: 1px;
+}
+
+.gauge-container {
+  width: 100%;
+  margin-bottom: 3px; 
+}
+
+.gauge-text {
+  text-align: left;
+  font-size: 13px;
+}
+
+.gauge {
+  height: 3px;
+  background-color: transparent; 
+  overflow: hidden;
+}
+
+.gauge-fill {
+  height: 100%;
+  width: 100%; 
+  background: linear-gradient(to right, rgb(197, 93, 93), rgb(93, 192, 93)); 
+}
+
+#gauge-csharp {
+  width: 95%;
+}
+
+#gauge-sql {
+  width: 85%;
+}
+#gauge-js {
+  width: 75%;
+}
+#gauge-ts {
+  width: 70%;
+}
+#gauge-python {
+  width: 70%;
+}
+#gauge-php {
+  width: 60%;
+}
+#gauge-dotnet {
+  width: 90%;
+}
+#gauge-node {
+  width: 70%;
+}
+#gauge-express {
+  width: 80%;
+}
+#gauge-wpf {
+  width: 85%;
+}
+#gauge-winforms {
+  width: 65%;
+}
+#gauge-pyqt {
+  width: 60%;
+}
+#gauge-asp {
+  width: 90%;
+}
+#gauge-flask {
+  width: 75%;
+}
+#gauge-angular {
+  width: 70%;
+}
+#gauge-jq {
+  width: 80%;
+}
+#gauge-css {
+  width: 80%;
+}
+#gauge-tf {
+  width: 90%;
+}
+#gauge-pytorch {
+  width: 60%;
+}
+#gauge-mlnet {
+  width: 85%;
+}
+
+#gauge-opencv {
+  width: 85%;
+}
+#gauge-unity {
+  width: 80%;
+}
+#gauge-cuda {
+  width: 85%;
+}
+#gauge-git {
+  width: 90%;
+}
+#gauge-docker {
+  width: 75%;
+}
+#gauge-gitlab {
+  width: 80%;
+}
+#gauge-jira {
+  width: 80%;
+}
+#gauge-postman {
+  width: 90%;
+}
+#gauge-redis {
+  width: 80%;
+}
+#gauge-rabbit {
+  width: 75%;
 }

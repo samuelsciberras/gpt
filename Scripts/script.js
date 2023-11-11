@@ -36,9 +36,6 @@ function openCategory(evt, categoryName) {
   evt.currentTarget.className += " active";
 }
 
-window.onload = () => {
-  document.getElementById("languagesSkill").click();
-};
 
 document.addEventListener('DOMContentLoaded', () => {
   const readMoreLinks = document.querySelectorAll('.readmore');
