@@ -245,7 +245,7 @@ h2 {
 
 .gauge {
   height: 3px;
-  background-color: transparent; 
+  background-color: #bdbdbd2f; 
   overflow: hidden;
 }
 
