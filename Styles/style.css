@@ -45,17 +45,17 @@ header img {
 .social-buttons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .social-buttons a {
   display: block;
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  background-repeat: no-repeat;
   color: #171515;
-  margin: 0 10px;
+}
+
+.social-buttons a i {
+  font-size: 30px;
 }
 
 .social-buttons a:hover {
@@ -64,6 +64,7 @@ header img {
 
 .linkedin {
   color: #0077b5  !important;
+  margin-right: 15px;
 }
 
 section {
