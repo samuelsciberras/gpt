@@ -1,1 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
+}
