@@ -1,6 +1,6 @@
 @media (max-width: 750px) {
     .content-container {
-      width: 90%; /* Set the width of the carousel to 50% of the screen */
+      width: 90%; 
     }
     .tab button {
       float: left;

@@ -3,9 +3,9 @@ html {
 }
 
 #headingName {
-  font-family: "Dancing Script", cursive; /* This is a Google font that looks handwritten */
-  font-size: 34px; /* Adjust the size as needed */
-  color: #000; /* This is black color, you can change as needed */
+  font-family: "Dancing Script", cursive;
+  font-size: 34px;
+  color: #000;
   margin-bottom: -5px;
 }
 
@@ -18,7 +18,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* Radial gradient from dark grey to white */
   background-image: radial-gradient(circle at center, white, darkgrey);
 }
 
@@ -55,12 +54,12 @@ header img {
   height: 30px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 10px; /* 10px spacing between buttons */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-buttons a:hover {
-  transform: scale(1.05); /* Slightly increase the size on hover */
+  transform: scale(1.05);
 }
 
 .linkedin {
@@ -101,21 +100,21 @@ h2 {
 }
 
 .content-container {
-  width: 40%; /* Set the width of the carousel to 50% of the screen */
-  margin: 0 auto; /* Center the carousel */
+  width: 40%;
+  margin: 0 auto;
 }
 
 .content-slide {
   display: flex;
   transition: transform 0.5s ease;
-  width: 100%; /* Ensure that each slide takes up the full width of the carousel */
+  width: 100%;
 }
 
 .slide {
-  flex: 0 0 100%; /* Each slide takes up 100% of the carousel width */
+  flex: 0 0 100%;
   box-sizing: border-box;
   padding: 20px;
-  transition: transform 0.5s ease-in-out; /* smooth transition for the transform */
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-header {
@@ -124,27 +123,27 @@ h2 {
 
 .carousel-header button {
   background-color: linear-gradient(to top right, #333, #2a2a2a);
-  color: #333; /* White text */
-  padding: 10px 20px; /* Padding around the text */
-  margin: 5px; /* Spacing between buttons */
-  border: none; /* No border */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Cursor changes to pointer on hover */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-  font-size: 16px; /* Font size */
-  font-weight: bold; /* Bold font */
+  color: #333;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  /* No border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .carousel-header button:hover {
   background-color: #666;
   color: white;
-  transform: scale(1.05); /* Slightly increase the size on hover */
+  transform: scale(1.05);
 }
 
-/* Active button styling */
 .active {
-  background-color: #333; /* Darker background for active button */
-  color: #fff !important; /* White text for active button */
+  background-color: #333;
+  color: #fff !important;
 }
 
 .date,
@@ -159,9 +158,14 @@ h2 {
   font-weight: 400;
   font-size: 15px;
 }
+
 .moreinfo {
   display: none;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
+
 .readmore {
   margin-left: 5px;
   color: lightskyblue;
@@ -187,17 +191,16 @@ h2 {
 .flag-icon {
   border-radius: 4px;
   margin-top: 5px;
-  height: 20px; /* You can adjust the size as needed */
+  height: 20px;
   width: auto;
   vertical-align: middle;
 }
 
 .flag-text {
   vertical-align: middle;
-  margin-left: 2px; /* Space between icon and text */
+  margin-left: 2px;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
   float: left;
@@ -212,17 +215,15 @@ h2 {
 .tabcontent p {
   font-size: 13px;
 }
-/* Change background color of buttons on hover */
+
 .tab button:hover {
   background-color: #ddd;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 }
 
-/* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
