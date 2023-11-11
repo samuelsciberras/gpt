@@ -164,6 +164,9 @@ h2 {
 }
 .readmore {
   margin-left: 5px;
+  color: lightskyblue;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #dynamic-text {
@@ -201,11 +204,14 @@ h2 {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 10px 13px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 14px;
 }
 
+.tabcontent p {
+  font-size: 13px;
+}
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;

@@ -5,8 +5,8 @@ function scrollToElement(elementId) {
 
 const texts = [
   "Software Engineer",
-  "Solutions Architect",
   "Computer Vision Enthusiast",
+  "Solutions Architect",
   "Machine Learning Engineer",
 ];
 let count = 0;
