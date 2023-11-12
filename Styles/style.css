@@ -2,6 +2,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(circle at center, white, darkgrey);
+}
+
 #headingName {
   font-family: "Dancing Script", cursive;
   font-size: 40px;
@@ -12,13 +19,6 @@ html {
 .role-mb {
   margin-top: -12px;
   display: none;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: radial-gradient(circle at center, white, darkgrey);
 }
 
 footer {
@@ -63,7 +63,7 @@ header img {
 }
 
 .linkedin {
-  color: #0077b5  !important;
+  color: #0077b5 !important;
   margin-right: 15px;
 }
 
@@ -184,6 +184,7 @@ h2 {
 .fade-out {
   opacity: 0;
 }
+
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
@@ -241,7 +242,7 @@ h2 {
 
 .gauge-container {
   width: 100%;
-  margin-bottom: 3px; 
+  margin-bottom: 3px;
 }
 
 .gauge-text {
@@ -251,14 +252,14 @@ h2 {
 
 .gauge {
   height: 3px;
-  background-color: #bdbdbd2f; 
+  background-color: #bdbdbd2f;
   overflow: hidden;
 }
 
 .gauge-fill {
   height: 100%;
-  width: 100%; 
-  background: linear-gradient(to right, rgb(197, 93, 93), rgb(93, 192, 93)); 
+  width: 100%;
+  background: linear-gradient(to right, rgb(197, 93, 93), rgb(93, 192, 93));
 }
 
 #gauge-csharp {
@@ -268,57 +269,75 @@ h2 {
 #gauge-sql {
   width: 85%;
 }
+
 #gauge-js {
   width: 75%;
 }
+
 #gauge-ts {
   width: 70%;
 }
+
 #gauge-python {
   width: 70%;
 }
+
 #gauge-php {
   width: 60%;
 }
+
 #gauge-dotnet {
   width: 90%;
 }
+
 #gauge-node {
   width: 70%;
 }
+
 #gauge-express {
   width: 80%;
 }
+
 #gauge-wpf {
   width: 85%;
 }
+
 #gauge-winforms {
   width: 65%;
 }
+
 #gauge-pyqt {
   width: 60%;
 }
+
 #gauge-asp {
   width: 90%;
 }
+
 #gauge-flask {
   width: 75%;
 }
+
 #gauge-angular {
   width: 70%;
 }
+
 #gauge-jq {
   width: 80%;
 }
+
 #gauge-css {
   width: 80%;
 }
+
 #gauge-tf {
   width: 90%;
 }
+
 #gauge-pytorch {
   width: 60%;
 }
+
 #gauge-mlnet {
   width: 85%;
 }
@@ -326,30 +345,49 @@ h2 {
 #gauge-opencv {
   width: 85%;
 }
+
 #gauge-unity {
   width: 80%;
 }
+
 #gauge-cuda {
   width: 85%;
 }
+
 #gauge-git {
   width: 90%;
 }
+
 #gauge-docker {
   width: 75%;
 }
+
 #gauge-gitlab {
   width: 80%;
 }
+
 #gauge-jira {
   width: 80%;
 }
+
 #gauge-postman {
   width: 90%;
 }
+
 #gauge-redis {
   width: 80%;
 }
+
 #gauge-rabbit {
   width: 75%;
+}
+
+#particles-js {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at center, rgb(185, 185, 185), darkgrey);
 }
