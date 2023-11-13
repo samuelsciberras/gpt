@@ -1,24 +1,32 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const readMoreLinks = document.querySelectorAll('.readmore');
-    const moreInfoParagraphs = document.querySelectorAll('.moreinfo');
+document.addEventListener('DOMContentLoaded', function() {
+    var toggleElements = document.querySelectorAll('.toggle');
+    var moreInfos = document.querySelectorAll('.moreinfo');
 
-    readMoreLinks.forEach((readMoreLink) => {
-        readMoreLink.addEventListener('click', function (e) {
-            e.preventDefault();
+    moreInfos.forEach(function(moreInfo, index) {
+        if (index === 0) {
+            moreInfo.style.display = 'block'; // First moreinfo section is expanded
+        } else {
+            moreInfo.style.display = 'none'; // Other moreinfo sections are collapsed
+        }
+    });
 
-            // First, close any open 'moreinfo' sections and show their corresponding 'readmore' links
-            moreInfoParagraphs.forEach((para) => {
-                para.style.display = 'none';
-            });
-            readMoreLinks.forEach((link) => {
-                link.style.display = 'inline-block';
-            });
+    if (toggleElements.length > 0) {
+        toggleElements[0].querySelector('.toggle-info').textContent = '-';
+    }
 
-            // Then, open the clicked 'moreinfo' section and hide its 'readmore' link
-            var moreInfo = this.parentElement.nextElementSibling;
-            if (moreInfo && moreInfo.classList.contains('moreinfo')) {
-                moreInfo.style.display = 'inline-block';
-                this.style.display = 'none';
+    toggleElements.forEach(function(toggleElement) {
+        toggleElement.addEventListener('click', function() {
+            var moreInfo = this.closest('.role').nextElementSibling;
+            while (moreInfo && !moreInfo.classList.contains('moreinfo')) {
+                moreInfo = moreInfo.nextElementSibling;
+            }
+
+            if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
+                moreInfo.style.display = 'block';
+                this.querySelector('.toggle-info').textContent = '-';
+            } else {
+                moreInfo.style.display = 'none';
+                this.querySelector('.toggle-info').textContent = '+';
             }
         });
     });

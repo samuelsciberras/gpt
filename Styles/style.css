@@ -16,6 +16,13 @@ body {
   margin-bottom: -5px;
 }
 
+.role {
+  user-select: none; /* Prevent text selection on touch */
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  -moz-user-select: none;
+}
+
 .role-mb {
   margin-top: -12px;
   display: none;
@@ -160,7 +167,6 @@ h2 {
   display: none;
   font-size: 13px;
   margin-top: -10px;
-  margin-bottom: -10px;
   text-align: justify;
 }
 
