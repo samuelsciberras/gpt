@@ -26,4 +26,8 @@
     .mb-hidden {
       display: none;
     }
+
+.read-more-button {
+  font-size: 10px;
+}
   }

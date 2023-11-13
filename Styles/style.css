@@ -247,6 +247,24 @@ h2 {
   padding: 1px;
 }
 
+.read-more-button {
+  background-color: #e7e7e7; 
+  border: none;
+  color: #555; 
+  padding: 4px 6px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px; 
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 4px; 
+}
+
+.read-more-button i {
+  margin-right: 5px; 
+}
+
 .gauge-container {
   width: 100%;
   margin-bottom: 3px;
