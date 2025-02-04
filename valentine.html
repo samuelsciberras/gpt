@@ -9,6 +9,68 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="./Styles/style_import.css" />
+    <style>
+        /* Make the main image fit the screen width */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+            /* Center the image horizontally */
+        }
+
+
+        /* Center the buttons container */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            /* Space between buttons */
+        }
+
+        /* Align the buttons vertically with label under the image */
+        .button {
+            display: flex;
+            flex-direction: column;
+            /* Stack image and label vertically */
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            /* Space between the image and the label */
+        }
+
+        /* Optional: Style the label if you want to add some spacing or styling */
+        .label {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* Styles for the heart animation */
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('Images/Valentine/heart.png');
+            /* Heart image */
+            background-size: cover;
+            animation: floatUp 2s ease-in forwards;
+            opacity: 0;
+        }
+
+        /* Animation for hearts floating upwards */
+        @keyframes floatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-150px) scale(1.5);
+            }
+        }
     </style>
 </head>
 
@@ -18,24 +80,44 @@
     </div>
     <div class="buttons">
         <div class="button">
-            <img id="yesButton" src="Images/Valentine/Yes.png" alt="Yes Button">
+            <img id="yesButton" src="Images/Valentine/Yes.png" alt="Yes Button" onclick="createHearts()">
             <div class="label">Yes</div>
         </div>
         <div class="button" onclick="handleNoClick()">
-            <img id="noButton" src="Images/Valentine/No.png" style="height: 150px;" alt="No Button">
-            <img id="noMultipleButton" style="display: none; height: 150px;" src="Images/Valentine/NoMultiple.png"
-                alt="No Button">
+            <img id="noButton" src="Images/Valentine/No.png" alt="No Button">
+            <img id="noMultipleButton" src="Images/Valentine/NoMultiple.png" style="display: none;" alt="No Button">
             <div class="label">No</div>
         </div>
     </div>
 
+    <div id="heartContainer"></div>
+
     <script>
         let noClickCount = 0;
+
         function handleNoClick() {
             noClickCount++;
             if (noClickCount >= 3) {
                 document.getElementById('noButton').style.display = "none";
                 document.getElementById('noMultipleButton').style.display = "block";
+            }
+        }
+
+        // Function to create heart elements when the "Yes" button is clicked
+        function createHearts() {
+            const heartContainer = document.getElementById('heartContainer');
+            for (let i = 0; i < 5; i++) {
+                let heart = document.createElement('div');
+                heart.classList.add('heart');
+                // Randomize the position of the heart
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.animationDelay = `${Math.random() * 1}s`;
+                heartContainer.appendChild(heart);
+
+                // Remove heart after animation ends
+                setTimeout(() => {
+                    heart.remove();
+                }, 2000); // Matches the duration of the animation
             }
         }
     </script>
