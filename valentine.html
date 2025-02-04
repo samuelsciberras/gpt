@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta data-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Zhenya, from Sam</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./Styles/style_import.css" />
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="Images/Valentine/ducks.png" alt="Main Image">
+    </div>
+    <div class="buttons">
+        <div class="button">
+            <img id="yesButton" src="Images/Valentine/Yes.png" alt="Yes Button">
+            <div class="label">Yes</div>
+        </div>
+        <div class="button" onclick="handleNoClick()">
+            <img id="noButton" src="Images/Valentine/No.png" style="height: 150px;" alt="No Button">
+            <img id="noMultipleButton" style="display: none; height: 150px;" src="Images/Valentine/NoMultiple.png"
+                alt="No Button">
+            <div class="label">No</div>
+        </div>
+    </div>
+
+    <script>
+        let noClickCount = 0;
+        function handleNoClick() {
+            noClickCount++;
+            if (noClickCount >= 3) {
+                document.getElementById('noButton').style.display = "none";
+                document.getElementById('noMultipleButton').style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
